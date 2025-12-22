@@ -4,6 +4,9 @@
   --muted: rgba(234,240,255,.75);
   --stroke: rgba(234,240,255,.14);
   --card: rgba(234,240,255,.05);
+
+  --primary: #eaf0ff;
+  --primary-text: #0b1220;
 }
 
 *{
@@ -17,7 +20,7 @@ body{
   color: var(--text);
 }
 
-/* ===== CONTENEUR PRINCIPAL ===== */
+/* ===== CONTENEUR ===== */
 .container{
   width: min(1000px, 92%);
   margin: 0 auto;
@@ -32,12 +35,12 @@ body{
   width: min(820px, 100%);
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 32px;
 
   background: var(--card);
   border: 1px solid var(--stroke);
   border-radius: 18px;
-  padding: 28px;
+  padding: 32px;
 }
 
 /* ===== PHOTO ===== */
@@ -56,28 +59,26 @@ body{
 }
 
 .profile__name{
-  margin: 0 0 8px;
-  font-size: clamp(1.8rem, 3vw, 2.4rem);
-  letter-spacing: .2px;
+  margin: 0 0 6px;
+  font-size: clamp(1.9rem, 3vw, 2.4rem);
 }
 
 .profile__title{
   margin: 0;
-  color: var(--muted);
   font-size: 1.1rem;
+  color: var(--muted);
 }
 
 .profile__tagline{
-  margin: 12px 0 16px;
+  margin: 14px 0 22px;
   color: var(--muted);
-  font-size: 1rem;
   max-width: 60ch;
 }
 
 /* ===== BOUTONS ===== */
-.profile__links{
+.profile__actions{
   display: flex;
-  gap: 10px;
+  gap: 12px;
   flex-wrap: wrap;
 }
 
@@ -85,39 +86,47 @@ body{
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 14px;
+
+  padding: 12px 18px;
   border-radius: 999px;
-  background: rgba(255,255,255,0.92);
-  color: #0b1220;
-  font-weight: 800;
-  border: 1px solid rgba(255,255,255,.12);
+  font-weight: 700;
   text-decoration: none;
+  cursor: pointer;
+
+  transition: transform .15s ease, opacity .15s ease;
 }
 
-.btn--ghost{
+.btn:hover{
+  transform: translateY(-1px);
+  opacity: .95;
+}
+
+/* Bouton principal */
+.btn--primary{
+  background: var(--primary);
+  color: var(--primary-text);
+  border: none;
+}
+
+/* Boutons secondaires */
+.btn--secondary{
   background: transparent;
   color: var(--text);
   border: 1px solid var(--stroke);
 }
 
-/* ===== RESPONSIVE (MOBILE) ===== */
+/* ===== MOBILE ===== */
 @media (max-width: 700px){
   .profile{
     flex-direction: column;
     text-align: center;
-    padding: 22px;
   }
 
   .profile__text{
     text-align: center;
   }
 
-  .profile__photo{
-    width: 130px;
-    height: 130px;
-  }
-
-  .profile__links{
+  .profile__actions{
     justify-content: center;
   }
 }
