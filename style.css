@@ -35,7 +35,6 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 14px;
 }
 
 .brand{
@@ -49,11 +48,9 @@ body{
 .brand__name{ font-weight: 800; }
 .brand__role{ color: var(--muted); font-size: .95rem; }
 
-/* ===== NAV ===== */
 .nav{
   display: flex;
   gap: 16px;
-  flex-wrap: wrap;
 }
 
 .nav a{
@@ -90,7 +87,6 @@ body{
   display: flex;
   gap: 32px;
   align-items: center;
-
   background: var(--card);
   border: 1px solid var(--stroke);
   border-radius: var(--radius);
@@ -107,11 +103,20 @@ body{
   flex-shrink: 0;
 }
 
-.profile__title{ color: var(--muted); }
+.profile__name{
+  margin: 0 0 6px;
+  font-size: clamp(1.9rem, 3vw, 2.4rem);
+}
+
+.profile__title{
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--muted);
+}
 
 .profile__tagline{
-  color: var(--muted);
   margin: 12px 0 18px;
+  color: var(--muted);
   max-width: 70ch;
 }
 
@@ -119,6 +124,33 @@ body{
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
+}
+
+/* ===== STACK TECHNIQUE ===== */
+.tech-stack{
+  margin: 12px 0 16px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tech{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--stroke);
+  background: rgba(234,240,255,.04);
+  font-size: .9rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.tech img{
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
 }
 
 /* ===== BUTTONS ===== */
@@ -133,7 +165,10 @@ body{
   transition: transform .15s ease, opacity .15s ease;
 }
 
-.btn:hover{ transform: translateY(-1px); opacity: .95; }
+.btn:hover{
+  transform: translateY(-1px);
+  opacity: .95;
+}
 
 .btn--primary{
   background: rgba(234,240,255,.95);
@@ -142,12 +177,12 @@ body{
 }
 
 .btn--secondary{
-  border: 1px solid var(--stroke);
-  color: var(--text);
   background: transparent;
+  color: var(--text);
+  border: 1px solid var(--stroke);
 }
 
-/* ===== PROJECTS (image alignée) ===== */
+/* ===== PROJECTS ===== */
 .projects{
   display: flex;
   flex-direction: column;
@@ -159,7 +194,6 @@ body{
   grid-template-columns: 240px 1fr;
   gap: 22px;
   align-items: center;
-
   background: var(--card);
   border: 1px solid var(--stroke);
   border-radius: var(--radius);
@@ -178,7 +212,7 @@ body{
 .project__content{
   display: flex;
   flex-direction: column;
-  min-height: 160px; /* permet un alignement visuel propre */
+  min-height: 160px;
 }
 
 .project__title{ margin: 0 0 6px; }
@@ -196,7 +230,7 @@ body{
 }
 
 .project__actions{
-  margin-top: auto; /* aligne les boutons en bas du bloc texte */
+  margin-top: auto;
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
@@ -273,6 +307,10 @@ body{
   }
 
   .profile__actions{
+    justify-content: center;
+  }
+
+  .tech-stack{
     justify-content: center;
   }
 
