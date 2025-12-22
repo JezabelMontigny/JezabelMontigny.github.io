@@ -1,17 +1,316 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="fr">
 <head>
-<link rel="stylesheet" href="style.css"/>
-<title> Le titre qui apparaitra dans le navigateur </title>
-<meta charset="UTF-8">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prénom Nom — Data Analyst RH</title>
+  <meta name="description" content="Portfolio de Prénom Nom, Data Analyst RH. Projets RH, dashboards Power BI, analyses Python/SQL, reporting et data visualisation." />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-<h1> Ici le titre principal </h1>
-<p> Et voilà le texte de la page</p>
-<h2> On peut créer jusqu'à six niveaux de titres en HTML </h2>
-<p> Et voici un autre paragraphe </p> 
-<a href= "http://www.wildcodeschool.com"> Site Wild Code School </a>
-<img src= "https://pbs.twimg.com/profile_images/1618934096293404672/tz_rzbJx_400x400.jpg">
-</body> 
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Retour en haut de page">
+        <span class="brand-name">Prénom Nom</span>
+        <span class="brand-role">Data Analyst RH</span>
+      </a>
+
+      <nav class="nav" aria-label="Navigation principale">
+        <a href="#projets">Projets</a>
+        <a href="#competences">Compétences</a>
+        <a href="#methode">Méthode</a>
+        <a href="#apropos">À propos</a>
+        <a class="btn btn--small" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="top" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="kicker">Portfolio</p>
+          <h1>J’analyse les données RH pour aider à décider.</h1>
+          <p class="lead">
+            Ancienne gestionnaire de paie, je transforme les données sociales (turnover, absentéisme, égalité pro)
+            en analyses actionnables et tableaux de bord clairs.
+          </p>
+
+          <div class="cta">
+            <a class="btn" href="#projets">Voir mes projets</a>
+            <a class="btn btn--ghost" href="#contact">Me contacter</a>
+          </div>
+
+          <div class="links">
+            <a href="TON-LINKEDIN" target="_blank" rel="noreferrer">LinkedIn</a>
+            <span class="dot">•</span>
+            <a href="TON-GITHUB" target="_blank" rel="noreferrer">GitHub</a>
+            <span class="dot">•</span>
+            <a href="TON-CV.pdf" target="_blank" rel="noreferrer">CV (PDF)</a>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Focus RH">
+          <h2>Spécialités RH</h2>
+          <ul>
+            <li>Turnover & rétention</li>
+            <li>Absentéisme & QVT</li>
+            <li>Indicateurs sociaux & reporting</li>
+            <li>Égalité salariale & parité</li>
+          </ul>
+
+          <div class="mini-kpis">
+            <div class="mini-kpi">
+              <span class="mini-kpi__label">Outils</span>
+              <span class="mini-kpi__value">Power BI · SQL · Python · Excel</span>
+            </div>
+            <div class="mini-kpi">
+              <span class="mini-kpi__label">Approche</span>
+              <span class="mini-kpi__value">Éthique · Lisible · Actionnable</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- PROJETS -->
+    <section id="projets" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Projets</h2>
+          <p>Études de cas RH : contexte → données → analyse → recommandations.</p>
+        </div>
+
+        <div class="grid cards">
+          <article class="card">
+            <div class="card-top">
+              <h3>Analyse du turnover</h3>
+              <p class="meta">Python · Power BI · Excel</p>
+            </div>
+            <p>
+              Identifier les services/profils à risque, analyser les facteurs (ancienneté, rémunération, satisfaction agrégée),
+              et proposer des leviers de fidélisation.
+            </p>
+            <div class="tags">
+              <span>KPIs RH</span><span>EDA</span><span>Dashboard</span>
+            </div>
+            <div class="card-actions">
+              <a class="btn btn--small" href="LIEN-GITHUB-TURNOVER" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="btn btn--small btn--ghost" href="LIEN-POWERBI-TURNOVER" target="_blank" rel="noreferrer">Dashboard</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-top">
+              <h3>Analyse de l’absentéisme</h3>
+              <p class="meta">Power BI · DAX</p>
+            </div>
+            <p>
+              Suivre la saisonnalité, les motifs d’absence, les populations concernées et construire un reporting
+              clair pour piloter les actions QVT.
+            </p>
+            <div class="tags">
+              <span>Time series</span><span>Segmentation</span><span>Reporting</span>
+            </div>
+            <div class="card-actions">
+              <a class="btn btn--small" href="LIEN-GITHUB-ABS" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="btn btn--small btn--ghost" href="LIEN-POWERBI-ABS" target="_blank" rel="noreferrer">Dashboard</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-top">
+              <h3>Égalité professionnelle H/F</h3>
+              <p class="meta">Python · SQL · Power BI</p>
+            </div>
+            <p>
+              Analyser les écarts de rémunération, la répartition des effectifs et produire un tableau de bord
+              synthétique pour suivre les indicateurs dans le temps.
+            </p>
+            <div class="tags">
+              <span>Équité</span><span>Analyse salariale</span><span>Storytelling</span>
+            </div>
+            <div class="card-actions">
+              <a class="btn btn--small" href="LIEN-GITHUB-EGALITE" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="btn btn--small btn--ghost" href="LIEN-POWERBI-EGALITE" target="_blank" rel="noreferrer">Dashboard</a>
+            </div>
+          </article>
+
+          <article class="card card--highlight">
+            <div class="card-top">
+              <h3>Automatisation d’un reporting RH</h3>
+              <p class="meta">SQL · Excel · Power BI</p>
+            </div>
+            <p>
+              Concevoir un pipeline simple : extraction SQL → contrôles Excel → dataset Power BI.
+              Objectif : fiabiliser et réduire le temps de production du reporting mensuel.
+            </p>
+            <div class="tags">
+              <span>Automatisation</span><span>Qualité data</span><span>Process</span>
+            </div>
+            <div class="card-actions">
+              <a class="btn btn--small" href="LIEN-GITHUB-REPORTING" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="btn btn--small btn--ghost" href="#contact">Discuter d’un cas</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="note-block">
+          <p>
+            <strong>Note éthique :</strong> lorsque des données de satisfaction sont issues d’enquêtes anonymes,
+            elles sont analysées à un niveau <em>agrégé</em> (service / catégorie), avec un seuil minimum de répondants.
+            Aucun lien individuel n’est réalisé.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPETENCES -->
+    <section id="competences" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Compétences</h2>
+          <p>Un mix data + compréhension métier RH (paie & indicateurs sociaux).</p>
+        </div>
+
+        <div class="grid skills">
+          <div class="panel">
+            <h3>Analyse</h3>
+            <ul>
+              <li>Python (pandas) : nettoyage, EDA, contrôle qualité</li>
+              <li>SQL : extraction, agrégations, jointures, KPIs</li>
+              <li>Excel : contrôles, tableaux, analyse rapide</li>
+            </ul>
+          </div>
+
+          <div class="panel">
+            <h3>Data viz & reporting</h3>
+            <ul>
+              <li>Power BI : modèle, mesures DAX, filtres, storytelling</li>
+              <li>Tableaux de bord RH : lisibles, orientés décision</li>
+              <li>Documentation : README, dictionnaire de données</li>
+            </ul>
+          </div>
+
+          <div class="panel">
+            <h3>Métier RH</h3>
+            <ul>
+              <li>Paie & données sociales</li>
+              <li>Turnover, absentéisme, égalité pro</li>
+              <li>Confidentialité & bonnes pratiques (anonymisation, agrégation)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="chips">
+          <span class="chip">Power BI</span>
+          <span class="chip">DAX</span>
+          <span class="chip">SQL</span>
+          <span class="chip">Python</span>
+          <span class="chip">Excel</span>
+          <span class="chip">Storytelling</span>
+          <span class="chip">KPIs RH</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- METHODE -->
+    <section id="methode" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Ma méthode</h2>
+          <p>Une démarche simple, reproductible, orientée décision.</p>
+        </div>
+
+        <div class="grid steps">
+          <div class="step">
+            <h3>1) Cadrer</h3>
+            <p>Définir le besoin métier RH, les indicateurs, le périmètre et les règles de confidentialité.</p>
+          </div>
+          <div class="step">
+            <h3>2) Préparer</h3>
+            <p>Nettoyer, contrôler, documenter. Objectif : un dataset fiable et traçable.</p>
+          </div>
+          <div class="step">
+            <h3>3) Analyser</h3>
+            <p>Exploration, segmentation, mise en évidence des tendances et facteurs clés.</p>
+          </div>
+          <div class="step">
+            <h3>4) Restituer</h3>
+            <p>Tableau de bord clair + synthèse : résultats, limites, recommandations actionnables.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- A PROPOS -->
+    <section id="apropos" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>À propos</h2>
+          <p>Paie → Data : la donnée au service des enjeux humains.</p>
+        </div>
+
+        <div class="about">
+          <div class="about-text">
+            <p>
+              Après <strong>12 ans d’expérience en gestion de la paie</strong>, je me suis spécialisée en analyse de données
+              pour accompagner les équipes RH avec des indicateurs fiables, des analyses pertinentes et des tableaux de bord lisibles.
+            </p>
+            <p>
+              J’aime travailler sur des sujets concrets : <strong>turnover</strong>, <strong>absentéisme</strong>, <strong>égalité salariale</strong>,
+              performance des process RH, fiabilisation des données et automatisation du reporting.
+            </p>
+
+            <div class="about-actions">
+              <a class="btn" href="TON-CV.pdf" target="_blank" rel="noreferrer">Télécharger mon CV</a>
+              <a class="btn btn--ghost" href="#contact">Me contacter</a>
+            </div>
+          </div>
+
+          <aside class="about-card" aria-label="Infos rapides">
+            <h3>Infos rapides</h3>
+            <ul>
+              <li><strong>Localisation :</strong> Lille (et/ou дистанцiel)</li>
+              <li><strong>Recherche :</strong> Data Analyst RH</li>
+              <li><strong>Disponibilité :</strong> à préciser</li>
+              <li><strong>Langues :</strong> Français / Anglais</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container contact">
+        <h2>Contact</h2>
+        <p>Envie d’échanger sur un besoin de reporting RH, dashboard, analyse ou automatisation ?</p>
+
+        <div class="contact-actions">
+          <a class="btn" href="mailto:ton.email@example.com">ton.email@example.com</a>
+          <a class="btn btn--ghost" href="TON-LINKEDIN" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="btn btn--ghost" href="TON-GITHUB" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+
+        <p class="small">
+          Astuce : remplace les liens “TON-…” et “LIEN-…” par tes URLs réelles.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Prénom Nom — Data Analyst RH</p>
+      <a href="#top" class="backtop">↑ Retour en haut</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>
