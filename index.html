@@ -4,13 +4,30 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jezabel Montigny — Data Analyst RH</title>
+  <meta name="description" content="Portfolio de Jezabel Montigny, Data Analyst RH : projets, tableaux de bord, compétences et contact." />
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <main class="container">
-    <section class="profile">
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header__inner">
+      <a class="brand" href="#top" aria-label="Aller en haut de page">
+        <span class="brand__name">Jezabel Montigny</span>
+        <span class="brand__role">Data Analyst RH</span>
+      </a>
 
+      <nav class="nav" aria-label="Navigation">
+        <a href="#projets">Projets</a>
+        <a href="#competences">Compétences</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="container">
+    <!-- PRESENTATION -->
+    <section class="profile" aria-label="Présentation">
       <img
         class="profile__photo"
         src="assets/photo profil.jpg"
@@ -27,28 +44,159 @@
           actionnables et tableaux de bord clairs.
         </p>
 
-        <!-- BOUTONS -->
-        <div class="profile__actions">
-          <a class="btn btn--primary" href="https://www.linkedin.com/in/jezabel-montigny-428145112" target="_blank" rel="noreferrer">
+        <div class="profile__actions" aria-label="Liens">
+          <a class="btn btn--primary"
+             href="https://www.linkedin.com/in/jezabel-montigny-428145112/"
+             target="_blank" rel="noreferrer">
             LinkedIn
           </a>
 
-          <a class="btn btn--secondary" href="https://github.com/JezabelMontigny" target="_blank" rel="noreferrer">
+          <a class="btn btn--secondary"
+             href="https://github.com/jezabelmontigny"
+             target="_blank" rel="noreferrer">
             GitHub
           </a>
 
-          <a class="btn btn--secondary" href="assets/CV.pdf" target="_blank" rel="noreferrer">
+          <a class="btn btn--secondary"
+             href="assets/CV_Jezabel_Montigny.pdf"
+             target="_blank" rel="noreferrer">
             CV (PDF)
           </a>
         </div>
       </div>
+    </section>
 
+    <!-- PROJETS -->
+    <section id="projets" class="section" aria-label="Projets">
+      <div class="section__head">
+        <h2 class="section__title">Projets</h2>
+        <p class="section__subtitle">Cartes à remplir : ajoute ensuite tes vrais projets un par un.</p>
+      </div>
+
+      <div class="grid grid--cards">
+        <!-- Carte modèle 1 -->
+        <article class="card">
+          <h3 class="card__title">Titre du projet</h3>
+          <p class="card__meta">Outils : Power BI · SQL · Python</p>
+          <p class="card__text">
+            Objectif du projet (1–2 lignes). Quel problème RH tu résous et ce que tu as livré.
+          </p>
+
+          <div class="tags" aria-label="Tags projet">
+            <span class="tag">KPI RH</span>
+            <span class="tag">Dashboard</span>
+            <span class="tag">EDA</span>
+          </div>
+
+          <div class="card__actions">
+            <a class="btn btn--secondary" href="#" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="btn btn--secondary" href="#" target="_blank" rel="noreferrer">Dashboard</a>
+          </div>
+        </article>
+
+        <!-- Carte modèle 2 -->
+        <article class="card">
+          <h3 class="card__title">Titre du projet</h3>
+          <p class="card__meta">Outils : Excel · Power BI</p>
+          <p class="card__text">
+            Objectif du projet (1–2 lignes). Données utilisées et principal insight / recommandation.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Absentéisme</span>
+            <span class="tag">Segmentation</span>
+            <span class="tag">Storytelling</span>
+          </div>
+
+          <div class="card__actions">
+            <a class="btn btn--secondary" href="#" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="btn btn--secondary" href="#" target="_blank" rel="noreferrer">Dashboard</a>
+          </div>
+        </article>
+
+        <!-- Carte modèle 3 -->
+        <article class="card">
+          <h3 class="card__title">Titre du projet</h3>
+          <p class="card__meta">Outils : SQL · Power BI</p>
+          <p class="card__text">
+            Objectif du projet (1–2 lignes). Indicateurs suivis et ce que le dashboard permet de piloter.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Égalité pro</span>
+            <span class="tag">Analyse</span>
+            <span class="tag">Reporting</span>
+          </div>
+
+          <div class="card__actions">
+            <a class="btn btn--secondary" href="#" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="btn btn--secondary" href="#" target="_blank" rel="noreferrer">Dashboard</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- COMPETENCES -->
+    <section id="competences" class="section" aria-label="Compétences">
+      <div class="section__head">
+        <h2 class="section__title">Compétences</h2>
+        <p class="section__subtitle">Une vue claire et simple de ce que tu sais faire.</p>
+      </div>
+
+      <div class="grid grid--skills">
+        <div class="card card--soft">
+          <h3 class="card__title">Analyse</h3>
+          <ul class="list">
+            <li>Python (pandas) : nettoyage, EDA</li>
+            <li>SQL : extraction, jointures, agrégations</li>
+            <li>Excel : contrôles, reporting</li>
+          </ul>
+        </div>
+
+        <div class="card card--soft">
+          <h3 class="card__title">Data visualisation</h3>
+          <ul class="list">
+            <li>Power BI : modèle, mesures DAX</li>
+            <li>Storytelling & KPIs RH</li>
+            <li>Dashboards actionnables</li>
+          </ul>
+        </div>
+
+        <div class="card card--soft">
+          <h3 class="card__title">Métier RH</h3>
+          <ul class="list">
+            <li>Paie & données sociales</li>
+            <li>Turnover, absentéisme, égalité pro</li>
+            <li>Confidentialité / anonymisation</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact" aria-label="Contact">
+      <div class="section__head">
+        <h2 class="section__title">Contact</h2>
+        <p class="section__subtitle">Un besoin de reporting RH / dashboard / analyse ? Échangeons.</p>
+      </div>
+
+      <div class="contact__actions">
+        <a class="btn btn--primary" href="mailto:ton.email@example.com">ton.email@example.com</a>
+        <a class="btn btn--secondary" href="https://www.linkedin.com/in/jezabel-montigny-428145112/" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
     </section>
   </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p>© <span id="year"></span> Jezabel Montigny — Data Analyst RH</p>
+      <a href="#top" class="footer__link">↑ Haut de page</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
-
-
-
-
-
