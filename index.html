@@ -64,3 +64,137 @@
         </div>
       </div>
     </section>
+
+    <!-- PROJETS -->
+    <section id="projets" class="section">
+      <div class="section__head">
+        <h2 class="section__title">Projets</h2>
+        <p class="section__subtitle">4 projets représentatifs de mon travail en analyse et reporting RH.</p>
+      </div>
+
+      <div class="projects">
+        <!-- PROJET 1 -->
+        <article class="project">
+          <img class="project__image" src="assets/projet1.jpg" alt="Aperçu du projet 1" />
+          <div class="project__content">
+            <h3 class="project__title">Titre du projet</h3>
+            <p class="project__meta">Outils : Power BI · SQL · Python</p>
+            <p class="project__text">Objectif du projet (1–2 lignes). Problématique RH et livrable.</p>
+            <div class="project__actions">
+              <a class="btn btn--secondary" href="#" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="btn btn--secondary" href="#" target="_blank" rel="noreferrer">Dashboard</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJET 2 -->
+        <article class="project">
+          <img class="project__image" src="assets/projet2.jpg" alt="Aperçu du projet 2" />
+          <div class="project__content">
+            <h3 class="project__title">Titre du projet</h3>
+            <p class="project__meta">Outils : Excel · Power BI</p>
+            <p class="project__text">Objectif du projet (1–2 lignes). Données utilisées et analyse clé.</p>
+            <div class="project__actions">
+              <a class="btn btn--secondary" href="#" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="btn btn--secondary" href="#" target="_blank" rel="noreferrer">Dashboard</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJET 3 -->
+        <article class="project">
+          <img class="project__image" src="assets/Projet3.jpg" alt="Aperçu du projet 3" />
+          <div class="project__content">
+            <h3 class="project__title">Titre du projet</h3>
+            <p class="project__meta">Outils : SQL · Power BI</p>
+            <p class="project__text">Objectif du projet (1–2 lignes). Indicateurs suivis et usages.</p>
+            <div class="project__actions">
+              <a class="btn btn--secondary" href="#" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="btn btn--secondary" href="#" target="_blank" rel="noreferrer">Dashboard</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJET 4 -->
+        <article class="project">
+          <img class="project__image" src="assets/projet4.jpg" alt="Aperçu du projet 4" />
+          <div class="project__content">
+            <h3 class="project__title">Titre du projet</h3>
+            <p class="project__meta">Outils : Python · Excel</p>
+            <p class="project__text">Objectif du projet (1–2 lignes). Analyse exploratoire et conclusions.</p>
+            <div class="project__actions">
+              <a class="btn btn--secondary" href="#" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="btn btn--secondary" href="#" target="_blank" rel="noreferrer">Dashboard</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- COMPETENCES -->
+    <section id="competences" class="section">
+      <div class="section__head">
+        <h2 class="section__title">Compétences</h2>
+        <p class="section__subtitle">Data, visualisation et expertise RH.</p>
+      </div>
+
+      <div class="grid grid--skills">
+        <div class="card card--soft">
+          <h3 class="card__title">Analyse</h3>
+          <ul class="list">
+            <li>Python (pandas)</li>
+            <li>SQL</li>
+            <li>Excel</li>
+          </ul>
+        </div>
+
+        <div class="card card--soft">
+          <h3 class="card__title">Data visualisation</h3>
+          <ul class="list">
+            <li>Power BI & DAX</li>
+            <li>Storytelling</li>
+            <li>KPIs RH</li>
+          </ul>
+        </div>
+
+        <div class="card card--soft">
+          <h3 class="card__title">Métier RH</h3>
+          <ul class="list">
+            <li>Paie & données sociales</li>
+            <li>Turnover, absentéisme</li>
+            <li>Confidentialité</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <div class="section__head">
+        <h2 class="section__title">Contact</h2>
+        <p class="section__subtitle">Échangeons sur vos besoins data RH.</p>
+      </div>
+
+      <div class="contact__actions">
+        <a class="btn btn--primary" href="mailto:ton.email@example.com">ton.email@example.com</a>
+        <a class="btn btn--secondary"
+           href="https://www.linkedin.com/in/jezabel-montigny-428145112/"
+           target="_blank" rel="noreferrer">
+          LinkedIn
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <p>© <span id="year"></span> Jezabel Montigny — Data Analyst RH</p>
+      <a class="footer__link" href="#top">↑ Haut de page</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
