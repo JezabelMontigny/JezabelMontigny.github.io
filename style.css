@@ -56,4 +56,12 @@
 }
 
 /* ===== MOBILE ===== */
-@media (m
+@media (max-width: 900px){
+  .project{
+    grid-template-columns: 1fr;
+  }
+
+  .project__image{
+    height: 180px;
+  }
+}
