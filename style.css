@@ -3,11 +3,10 @@
   --text: #eaf0ff;
   --muted: rgba(234,240,255,.75);
   --stroke: rgba(234,240,255,.14);
+  --card: rgba(234,240,255,.05);
 }
 
-*{
-  box-sizing: border-box;
-}
+*{ box-sizing: border-box; }
 
 body{
   margin: 0;
@@ -17,7 +16,7 @@ body{
 }
 
 .container{
-  width: min(900px, 92%);
+  width: min(1000px, 92%);
   margin: 0 auto;
   min-height: 100vh;
   display: grid;
@@ -26,13 +25,21 @@ body{
 }
 
 /* ===== PROFIL ===== */
-
 .profile{
-  width: 100%;
+  /* au lieu de prendre toute la largeur, on "cadre" le bloc */
+  width: min(720px, 100%);
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 32px;
+
+  /* on garde la photo à droite mais sans énorme vide */
+  justify-content: flex-start;
+  gap: 28px;
+
+  /* rendu plus pro : carte */
+  background: var(--card);
+  border: 1px solid var(--stroke);
+  border-radius: 18px;
+  padding: 28px;
 }
 
 .profile__text{
@@ -40,19 +47,18 @@ body{
 }
 
 .profile__name{
-  margin: 0 0 6px;
-  font-size: 2.2rem;
-  letter-spacing: .3px;
+  margin: 0 0 8px;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  letter-spacing: .2px;
 }
 
 .profile__title{
   margin: 0;
-  font-size: 1.1rem;
   color: var(--muted);
+  font-size: 1.1rem;
 }
 
 /* ===== PHOTO ===== */
-
 .profile__photo{
   width: 140px;
   height: 140px;
@@ -60,17 +66,26 @@ body{
   object-fit: cover;
   border: 1px solid var(--stroke);
   flex-shrink: 0;
+
+  /* pousse la photo à droite du bloc */
+  margin-left: auto;
 }
 
-/* ===== RESPONSIVE ===== */
-
-@media (max-width: 600px){
+/* ===== MOBILE ===== */
+@media (max-width: 700px){
   .profile{
     flex-direction: column-reverse;
     text-align: center;
+    padding: 22px;
   }
 
   .profile__text{
     text-align: center;
+  }
+
+  .profile__photo{
+    margin-left: 0;
+    width: 130px;
+    height: 130px;
   }
 }
