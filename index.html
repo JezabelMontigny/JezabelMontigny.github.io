@@ -48,7 +48,7 @@
         <div class="profile__actions" aria-label="Liens">
           <a class="btn btn--primary" href="https://www.linkedin.com/in/jezabel-montigny-428145112/" target="_blank" rel="noreferrer">LinkedIn</a>
           <a class="btn btn--secondary" href="https://github.com/jezabelmontigny" target="_blank" rel="noreferrer">GitHub</a>
-          <a class="btn btn--secondary" href="assets/CV_Jezabel_Montigny.pdf" target="_blank" rel="noreferrer">CV (PDF)</a>
+          <a class="btn btn--secondary" href="assets/CV.pdf" target="_blank" rel="noreferrer">CV (PDF)</a>
         </div>
       </div>
     </section>
@@ -69,13 +69,13 @@
             </div>
 
             <div class="gallery__thumbs" aria-label="Vignettes projet 1">
-              <button class="thumb is-active" type="button" data-thumb data-src="assets/projet1.jpg" aria-label="Vue 1 projet 1">
+              <button class="thumb" type="button" data-thumb aria-label="Vue 1 projet 1">
                 <img src="assets/projet1.jpg" alt="" />
               </button>
-              <button class="thumb" type="button" data-thumb data-src="assets/projet1.jpg" aria-label="Vue 2 projet 1">
+              <button class="thumb" type="button" data-thumb aria-label="Vue 2 projet 1">
                 <img src="assets/projet1.jpg" alt="" />
               </button>
-              <button class="thumb" type="button" data-thumb data-src="assets/projet1.jpg" aria-label="Vue 3 projet 1">
+              <button class="thumb" type="button" data-thumb aria-label="Vue 3 projet 1">
                 <img src="assets/projet1.jpg" alt="" />
               </button>
             </div>
@@ -100,13 +100,13 @@
             </div>
 
             <div class="gallery__thumbs" aria-label="Vignettes projet 2">
-              <button class="thumb is-active" type="button" data-thumb data-src="assets/projet3-1.jpg" aria-label="Vue 1 projet 2">
+              <button class="thumb" type="button" data-thumb aria-label="Vue 1 projet 2">
                 <img src="assets/projet3-1.jpg" alt="" />
               </button>
-              <button class="thumb" type="button" data-thumb data-src="assets/projet3-2.jpg" aria-label="Vue 2 projet 2">
+              <button class="thumb" type="button" data-thumb aria-label="Vue 2 projet 2">
                 <img src="assets/projet3-2.jpg" alt="" />
               </button>
-              <button class="thumb" type="button" data-thumb data-src="assets/projet3-3.jpg" aria-label="Vue 3 projet 2">
+              <button class="thumb" type="button" data-thumb aria-label="Vue 3 projet 2">
                 <img src="assets/projet3-3.jpg" alt="" />
               </button>
             </div>
@@ -127,18 +127,18 @@
         <article class="project">
           <div class="gallery" data-gallery>
             <div class="gallery__main">
-              <img class="gallery__image" data-main src="assets/projet2.jpg" alt="Aperçu du projet 3" />
+              <img class="gallery__image" data-main src="assets/projet3.jpg" alt="Aperçu du projet 3" />
             </div>
 
             <div class="gallery__thumbs" aria-label="Vignettes projet 3">
-              <button class="thumb is-active" type="button" data-thumb data-src="assets/projet2-1.jpg" aria-label="Vue 1 projet 3">
-                <img src="assets/projet2-1.jpg" alt="" />
+              <button class="thumb" type="button" data-thumb aria-label="Vue 1 projet 3">
+                <img src="assets/projet3.jpg" alt="" />
               </button>
-              <button class="thumb" type="button" data-thumb data-src="assets/projet2-2.jpg" aria-label="Vue 2 projet 3">
-                <img src="assets/projet2-2.jpg" alt="" />
+              <button class="thumb" type="button" data-thumb aria-label="Vue 2 projet 3">
+                <img src="assets/projet3.jpg" alt="" />
               </button>
-              <button class="thumb" type="button" data-thumb data-src="assets/projet2-3.jpg" aria-label="Vue 3 projet 3">
-                <img src="assets/projet2-3.jpg" alt="" />
+              <button class="thumb" type="button" data-thumb aria-label="Vue 3 projet 3">
+                <img src="assets/projet3.jpg" alt="" />
               </button>
             </div>
           </div>
@@ -162,13 +162,13 @@
             </div>
 
             <div class="gallery__thumbs" aria-label="Vignettes projet 4">
-              <button class="thumb is-active" type="button" data-thumb data-src="assets/projet4.jpg" aria-label="Vue 1 projet 4">
+              <button class="thumb" type="button" data-thumb aria-label="Vue 1 projet 4">
                 <img src="assets/projet4.jpg" alt="" />
               </button>
-              <button class="thumb" type="button" data-thumb data-src="assets/projet4.jpg" aria-label="Vue 2 projet 4">
+              <button class="thumb" type="button" data-thumb aria-label="Vue 2 projet 4">
                 <img src="assets/projet4.jpg" alt="" />
               </button>
-              <button class="thumb" type="button" data-thumb data-src="assets/projet4.jpg" aria-label="Vue 3 projet 4">
+              <button class="thumb" type="button" data-thumb aria-label="Vue 3 projet 4">
                 <img src="assets/projet4.jpg" alt="" />
               </button>
             </div>
@@ -248,19 +248,37 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Vignettes cliquables (robuste)
+    // SWAP : l'image principale échange sa place avec la vignette cliquée
     document.querySelectorAll("[data-gallery]").forEach((gallery) => {
       const mainImg = gallery.querySelector("[data-main]");
-      const buttons = gallery.querySelectorAll("[data-thumb]");
+      const thumbButtons = Array.from(gallery.querySelectorAll("[data-thumb]"));
 
-      buttons.forEach((btn) => {
+      // Marque active au chargement: vignette qui a le même src que la principale
+      thumbButtons.forEach((btn) => {
+        const img = btn.querySelector("img");
+        if (img && img.getAttribute("src") === mainImg.getAttribute("src")) {
+          thumbButtons.forEach((b) => b.classList.remove("is-active"));
+          btn.classList.add("is-active");
+        }
+      });
+
+      thumbButtons.forEach((btn) => {
         btn.addEventListener("click", () => {
-          const src = btn.dataset.src;
-          if (!src) return;
+          const thumbImg = btn.querySelector("img");
+          if (!thumbImg) return;
 
-          mainImg.src = src;
+          const mainSrc = mainImg.getAttribute("src");
+          const thumbSrc = thumbImg.getAttribute("src");
 
-          buttons.forEach((b) => b.classList.remove("is-active"));
+          // si on clique sur la même image, rien à faire
+          if (mainSrc === thumbSrc) return;
+
+          // SWAP
+          mainImg.setAttribute("src", thumbSrc);
+          thumbImg.setAttribute("src", mainSrc);
+
+          // Update état actif
+          thumbButtons.forEach((b) => b.classList.remove("is-active"));
           btn.classList.add("is-active");
         });
       });
@@ -268,8 +286,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
