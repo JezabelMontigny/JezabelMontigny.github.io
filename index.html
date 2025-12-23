@@ -9,6 +9,7 @@
 </head>
 
 <body>
+  <!-- HEADER -->
   <header class="header">
     <div class="header__inner">
       <a class="brand" href="#top">
@@ -26,13 +27,19 @@
 
   <main id="top" class="container">
 
+    <!-- PRESENTATION -->
     <section class="profile" aria-label="Présentation">
-      <img class="profile__photo" src="assets/photo profil.jpg" alt="Photo de Jezabel Montigny" />
+      <img
+        class="profile__photo"
+        src="assets/photo profil.jpg"
+        alt="Photo de Jezabel Montigny"
+      />
 
       <div class="profile__text">
         <h1 class="profile__name">Jezabel Montigny</h1>
         <p class="profile__title">Data Analyst RH</p>
 
+        <!-- STACK TECHNIQUE (LOGOS COULEUR) -->
         <div class="tech-stack" aria-label="Compétences techniques">
           <span class="tech"><img src="assets/icones/powerbi.svg" alt="Power BI" />Power BI</span>
           <span class="tech"><img src="assets/icones/sql.svg" alt="SQL" />SQL</span>
@@ -46,13 +53,28 @@
         </p>
 
         <div class="profile__actions" aria-label="Liens">
-          <a class="btn btn--primary" href="https://www.linkedin.com/in/jezabel-montigny-428145112/" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a class="btn btn--secondary" href="https://github.com/jezabelmontigny" target="_blank" rel="noreferrer">GitHub</a>
-          <a class="btn btn--secondary" href="assets/CV.pdf" target="_blank" rel="noreferrer">CV (PDF)</a>
+          <a class="btn btn--primary"
+             href="https://www.linkedin.com/in/jezabel-montigny-428145112/"
+             target="_blank" rel="noreferrer">
+            LinkedIn
+          </a>
+
+          <a class="btn btn--secondary"
+             href="https://github.com/jezabelmontigny"
+             target="_blank" rel="noreferrer">
+            GitHub
+          </a>
+
+          <a class="btn btn--secondary"
+             href="assets/CV_Jezabel_Montigny.pdf"
+             target="_blank" rel="noreferrer">
+            CV (PDF)
+          </a>
         </div>
       </div>
     </section>
 
+    <!-- PROJETS -->
     <section id="projets" class="section" aria-label="Projets">
       <div class="section__head">
         <h2 class="section__title">Projets</h2>
@@ -61,17 +83,31 @@
 
       <div class="projects">
 
+        <!-- PROJET 1 -->
         <article class="project">
-          <div class="project__media" aria-label="Captures du projet 1">
-            <img class="project__thumb project__thumb--one" src="assets/projet1.jpg" alt="Aperçu du projet 1" />
-            <img class="project__thumb project__thumb--two" src="assets/projet1.jpg" alt="Aperçu secondaire du projet 1" />
-            <img class="project__thumb project__thumb--three" src="assets/projet1.jpg" alt="Aperçu tertiaire du projet 1" />
+          <div class="project__gallery" data-gallery>
+            <div class="gallery__main">
+              <img class="gallery__image" data-main src="assets/projet2.jpg" alt="Aperçu du projet 1" />
+            </div>
+
+            <div class="gallery__thumbs" role="list" aria-label="Vignettes projet 1">
+              <button class="thumb is-active" type="button" data-thumb data-src="assets/projet2.jpg" aria-label="Vue 1 projet 1">
+                <img src="assets/projet1.jpg" alt="" />
+              </button>
+              <button class="thumb" type="button" data-thumb data-src="assets/projet3.jpg" aria-label="Vue 2 projet 1">
+                <img src="assets/projet1.jpg" alt="" />
+              </button>
+              <button class="thumb" type="button" data-thumb data-src="assets/projet3.jpg" aria-label="Vue 3 projet 1">
+                <img src="assets/projet1.jpg" alt="" />
+              </button>
+            </div>
           </div>
 
           <div class="project__content">
             <h3 class="project__title">Analyse de la masse salariale</h3>
             <p class="project__meta">Outils : Power BI · Power Query</p>
             <p class="project__text">Objectif du projet</p>
+
             <div class="project__actions">
               <a class="btn btn--secondary" href="#" target="_blank" rel="noreferrer">GitHub</a>
               <a class="btn btn--secondary" href="#" target="_blank" rel="noreferrer">Dashboard</a>
@@ -79,17 +115,31 @@
           </div>
         </article>
 
+        <!-- PROJET 2 -->
         <article class="project">
-          <div class="project__media" aria-label="Captures du projet 2">
-            <img class="project__thumb project__thumb--one" src="assets/projet3.jpg" alt="Aperçu du projet 2" />
-            <img class="project__thumb project__thumb--two" src="assets/projet3.jpg" alt="Aperçu secondaire du projet 2" />
-            <img class="project__thumb project__thumb--three" src="assets/projet2.jpg" alt="Aperçu tertiaire du projet 2" />
+          <div class="project__gallery" data-gallery>
+            <div class="gallery__main">
+              <img class="gallery__image" data-main src="assets/projet2.jpg" alt="Aperçu du projet 2" />
+            </div>
+
+            <div class="gallery__thumbs" role="list" aria-label="Vignettes projet 2">
+              <button class="thumb is-active" type="button" data-thumb data-src="assets/projet2.jpg" aria-label="Vue 1 projet 2">
+                <img src="assets/projet2.jpg" alt="" />
+              </button>
+              <button class="thumb" type="button" data-thumb data-src="assets/projet2.jpg" aria-label="Vue 2 projet 2">
+                <img src="assets/projet2.jpg" alt="" />
+              </button>
+              <button class="thumb" type="button" data-thumb data-src="assets/projet2.jpg" aria-label="Vue 3 projet 2">
+                <img src="assets/projet2.jpg" alt="" />
+              </button>
+            </div>
           </div>
 
           <div class="project__content">
             <h3 class="project__title">Suivi de la performance — Toys&Models</h3>
             <p class="project__meta">Outils : SQL · Power BI</p>
             <p class="project__text">Objectif du projet</p>
+
             <div class="project__actions">
               <a class="btn btn--secondary" href="#" target="_blank" rel="noreferrer">GitHub</a>
               <a class="btn btn--secondary" href="#" target="_blank" rel="noreferrer">Dashboard</a>
@@ -97,17 +147,31 @@
           </div>
         </article>
 
+        <!-- PROJET 3 -->
         <article class="project">
-          <div class="project__media" aria-label="Captures du projet 3">
-            <img class="project__thumb project__thumb--one" src="assets/projet3.jpg" alt="Aperçu du projet 3" />
-            <img class="project__thumb project__thumb--two" src="assets/projet3.jpg" alt="Aperçu secondaire du projet 3" />
-            <img class="project__thumb project__thumb--three" src="assets/projet3.jpg" alt="Aperçu tertiaire du projet 3" />
+          <div class="project__gallery" data-gallery>
+            <div class="gallery__main">
+              <img class="gallery__image" data-main src="assets/projet3.jpg" alt="Aperçu du projet 3" />
+            </div>
+
+            <div class="gallery__thumbs" role="list" aria-label="Vignettes projet 3">
+              <button class="thumb is-active" type="button" data-thumb data-src="assets/projet3.jpg" aria-label="Vue 1 projet 3">
+                <img src="assets/projet3.jpg" alt="" />
+              </button>
+              <button class="thumb" type="button" data-thumb data-src="assets/projet3.jpg" aria-label="Vue 2 projet 3">
+                <img src="assets/projet3.jpg" alt="" />
+              </button>
+              <button class="thumb" type="button" data-thumb data-src="assets/projet3.jpg" aria-label="Vue 3 projet 3">
+                <img src="assets/projet3.jpg" alt="" />
+              </button>
+            </div>
           </div>
 
           <div class="project__content">
             <h3 class="project__title">Application « La Boussole Lilloise »</h3>
             <p class="project__meta">Outils : Python · Django · API</p>
             <p class="project__text">Objectif du projet</p>
+
             <div class="project__actions">
               <a class="btn btn--secondary" href="#" target="_blank" rel="noreferrer">GitHub</a>
               <a class="btn btn--secondary" href="#" target="_blank" rel="noreferrer">Démo</a>
@@ -115,17 +179,31 @@
           </div>
         </article>
 
+        <!-- PROJET 4 -->
         <article class="project">
-          <div class="project__media" aria-label="Captures du projet 4">
-            <img class="project__thumb project__thumb--one" src="assets/projet4.jpg" alt="Aperçu du projet 4" />
-            <img class="project__thumb project__thumb--two" src="assets/projet4.jpg" alt="Aperçu secondaire du projet 4" />
-            <img class="project__thumb project__thumb--three" src="assets/projet4.jpg" alt="Aperçu tertiaire du projet 4" />
+          <div class="project__gallery" data-gallery>
+            <div class="gallery__main">
+              <img class="gallery__image" data-main src="assets/projet4.jpg" alt="Aperçu du projet 4" />
+            </div>
+
+            <div class="gallery__thumbs" role="list" aria-label="Vignettes projet 4">
+              <button class="thumb is-active" type="button" data-thumb data-src="assets/projet4.jpg" aria-label="Vue 1 projet 4">
+                <img src="assets/projet4.jpg" alt="" />
+              </button>
+              <button class="thumb" type="button" data-thumb data-src="assets/projet4.jpg" aria-label="Vue 2 projet 4">
+                <img src="assets/projet4.jpg" alt="" />
+              </button>
+              <button class="thumb" type="button" data-thumb data-src="assets/projet4.jpg" aria-label="Vue 3 projet 4">
+                <img src="assets/projet4.jpg" alt="" />
+              </button>
+            </div>
           </div>
 
           <div class="project__content">
             <h3 class="project__title">Système de recommandation de films</h3>
             <p class="project__meta">Outils : Python · Machine Learning · Streamlit · API</p>
             <p class="project__text">Objectif du projet</p>
+
             <div class="project__actions">
               <a class="btn btn--secondary" href="#" target="_blank" rel="noreferrer">GitHub</a>
               <a class="btn btn--secondary" href="#" target="_blank" rel="noreferrer">Démo</a>
@@ -136,6 +214,7 @@
       </div>
     </section>
 
+    <!-- COMPETENCES -->
     <section id="competences" class="section" aria-label="Compétences">
       <div class="section__head">
         <h2 class="section__title">Compétences</h2>
@@ -172,6 +251,7 @@
       </div>
     </section>
 
+    <!-- CONTACT -->
     <section id="contact" class="section contact" aria-label="Contact">
       <div class="section__head">
         <h2 class="section__title">Contact</h2>
@@ -180,12 +260,17 @@
 
       <div class="contact__actions">
         <a class="btn btn--primary" href="mailto:ton.email@example.com">ton.email@example.com</a>
-        <a class="btn btn--secondary" href="https://www.linkedin.com/in/jezabel-montigny-428145112/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="btn btn--secondary"
+           href="https://www.linkedin.com/in/jezabel-montigny-428145112/"
+           target="_blank" rel="noreferrer">
+          LinkedIn
+        </a>
       </div>
     </section>
 
   </main>
 
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer__inner">
       <p>© <span id="year"></span> Jezabel Montigny — Data Analyst RH</p>
@@ -194,8 +279,28 @@
   </footer>
 
   <script>
+    // année footer
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // vignettes cliquables
+    document.querySelectorAll("[data-gallery]").forEach((gallery) => {
+      const mainImg = gallery.querySelector("[data-main]");
+      const thumbs = Array.from(gallery.querySelectorAll("[data-thumb]"));
+
+      thumbs.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const src = btn.getAttribute("data-src");
+          if (!src) return;
+
+          // update image principale
+          mainImg.src = src;
+
+          // état actif
+          thumbs.forEach((b) => b.classList.remove("is-active"));
+          btn.classList.add("is-active");
+        });
+      });
+    });
   </script>
 </body>
 </html>
-
