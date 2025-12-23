@@ -18,7 +18,7 @@ body{
   color: var(--text);
 }
 
-/* Reset boutons (évite le rendu “pas correct” selon navigateur) */
+/* Reset boutons */
 button{
   font: inherit;
   color: inherit;
@@ -232,14 +232,12 @@ button{
   object-position: center;
 }
 
-/* Thumbs layout */
 .gallery__thumbs{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
 }
 
-/* Boutons vignettes : reset complet, rendu stable */
 .thumb{
   appearance: none;
   -webkit-appearance: none;
@@ -251,7 +249,6 @@ button{
   overflow: hidden;
   cursor: pointer;
   line-height: 0;
-  box-shadow: none;
   transition: transform .12s ease, opacity .12s ease, border-color .12s ease;
 }
 
@@ -268,19 +265,18 @@ button{
   object-position: center;
 }
 
-/* état actif visible */
 .thumb.is-active{
   border-color: rgba(234,240,255,.65);
   outline: 2px solid rgba(234,240,255,.25);
   outline-offset: 2px;
 }
 
-/* Contenu */
+/* Contenu projet */
 .project__content{
   display: flex;
   flex-direction: column;
   gap: 6px;
-  min-height: 280px; /* aligne visuellement avec la galerie */
+  min-height: 280px;
 }
 
 .project__title{ margin: 0; }
