@@ -53,7 +53,7 @@ button{
 }
 
 .brand__name{ font-weight: 800; }
-.brand__role{ color: var(--muted); font-size: 1.1rem;font-weight: 500; }
+.brand__role{ color: var(--muted); font-size: 1.1rem;font-weight: 600; }
 
 .nav{
   display: flex;
@@ -394,6 +394,7 @@ button{
     min-height: auto;
   }
 }
+
 
 
 
